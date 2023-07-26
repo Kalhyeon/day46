@@ -1,0 +1,18 @@
+1. WAS 는 서블릿을 생성, 관리해준다.
+   이렇게 생성, 관리해주는 것을 컨테이너라고 한다.
+   따라서 WAS 를 서블릿 컨테이너, JSP 컨테이너라고도 한다.
+   
+2. 스프링은 자기 자신을 DIxAOP 컨테이너라고 부른다.
+   즉, 스프링은 DI 와 AOP 를 해주는 프레임워크라고 보면 된다.
+   DI : 스프링이 객체를 생성하고, 개발자에게 빌려주는 개념 (new 금지)
+   AOP : Aspect Oriented Programming, 관점 지향 프로그래밍
+   		 횡단 관심 (여기저기에서 필요한 작업)을 객체로 생성하여 빌려서 사용한다.
+
+3. 스프링 컨테이너의 핵심 클래스는 ApplicationContext 이다.
+   - ApplicationContext 는 객체를 생성한다.
+     스프링이 생성한 객체를 스프링 빈이라고 한다.
+     스프링은 @Component, @Controller, @Service, @Repository
+     가 지정된 클래스의 객체를 생성한다.
+     스프링이 4개의 어노테이션이 걸린 클래스를 찾는 작업 : component-scan
+     component-scan 하는 패키지
+     	프로젝트를 만들 때 지정한 패키지의 하위 패키지들
